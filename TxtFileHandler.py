@@ -55,3 +55,16 @@ class TxtFileHandler:
                     file.write(line)
         except Exception as e:
             print(f"Ошибка при добавлении данных в файл: {e}")
+
+if __name__ == "__main__":
+    handler = TxtFileHandler()
+
+    # Запись в файл
+    handler.write_file("my_file.txt", "This is a test string.\n")
+
+    # Добавление в файл
+    handler.append_file("my_file.txt", "This is another string.\n")
+
+    # Чтение из файла
+    content = handler.read_file("my_file.txt")
+    print(content)
