@@ -27,7 +27,13 @@ class TxtFileHandler:
             return ""
     @staticmethod
     def write_file(filepath: str, *data: str) -> None:
-        """Метод для записи данных в TXT файл."""
+        """
+        Метод для записи данных в TXT файл.
+
+        Args:
+            filepath (str): Путь к файлу.
+            *data (str): Строки для записи в файл.
+        """
         try:
             with open(filepath, 'w', encoding='utf-8') as file:
                 for line in data:
