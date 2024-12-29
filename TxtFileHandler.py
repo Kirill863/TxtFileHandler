@@ -42,7 +42,13 @@ class TxtFileHandler:
             print(f"Ошибка при записи в файл: {e}")
     @staticmethod
     def append_file(filepath: str, *data: str) -> None:
-        """Метод для дописывания данных в TXT файл."""
+        """
+        Метод для дописывания данных в TXT файл.
+
+        Args:
+            filepath (str): Путь к файлу.
+            *data (str): Строки для добавления в файл.
+        """
         try:
             with open(filepath, 'a', encoding='utf-8') as file:
                 for line in data:
