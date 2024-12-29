@@ -10,7 +10,12 @@ class TxtFileHandler:
 
     @staticmethod
     def read_file(filepath: str) -> str:        
-        """Метод для чтения данных из TXT файла."""
+        """Метод для чтения данных из TXT файла.
+                Args:
+                    filepath (str): Путь к файлу.
+                Returns:
+                    str: Содержимое файла или пустая строка, если файл не существует.
+                """
         try:
             with open(filepath, 'r', encoding='utf-8') as file:
                 content = file.read()
