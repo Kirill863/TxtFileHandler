@@ -1,4 +1,4 @@
-class TxtFileHandler
+class TxtFileHandler:
     @staticmethod
     def read_file(filepath: str) -> str:
         """Метод для чтения данных из TXT файла."""
@@ -20,3 +20,12 @@ class TxtFileHandler
                     file.write(line)
         except Exception as e:
             print(f"Ошибка при записи в файл: {e}")
+    @staticmethod
+    def append_file(filepath: str, *data: str) -> None:
+        """Метод для дописывания данных в TXT файл."""
+        try:
+            with open(filepath, 'a', encoding='utf-8') as file:
+                for line in data:
+                    file.write(line)
+        except Exception as e:
+            print(f"Ошибка при добавлении данных в файл: {e}")
