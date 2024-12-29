@@ -1,6 +1,15 @@
 class TxtFileHandler:
+    """
+    Класс для работы с текстовыми файлами.
+
+    Методы:
+        read_file(filepath: str) -> str: Чтение данных из TXT файла.
+        write_file(filepath: str, *data: str) -> None: Запись данных в TXT файл.
+        append_file(filepath: str, *data: str) -> None: Дописывание данных в TXT файл.
+    """
+
     @staticmethod
-    def read_file(filepath: str) -> str:
+    def read_file(filepath: str) -> str:        
         """Метод для чтения данных из TXT файла."""
         try:
             with open(filepath, 'r', encoding='utf-8') as file:
